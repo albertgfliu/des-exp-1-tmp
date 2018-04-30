@@ -24,7 +24,7 @@ def javacOptionsVersion(scalaVersion: String): Seq[String] = {
   }
 }
 
-name := "chisel-module-template"
+name := "carry-select-adder"
 
 version := "3.1.0"
 

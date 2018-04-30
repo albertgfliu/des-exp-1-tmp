@@ -1,0 +1,17 @@
+1. Full Adders - CONSTRUCTED, TEST
+2. 4-bit Adder - CONSTRUCTED, TEST, VECTOR/PARAMETRIZE?
+3. 2-1 Multiplexer - don't need, use built-in Mux structure
+4. Construct the 2-1 Multiplexers with the Full Adder into conditional adder
+
+
+full adders make up N-bit adders
+N-bit adders make up conditional adders
+conditional adders make up a conditional adder stage
+
+conditional adder stages make up full carry-select adder
+
+
+TODO:
+4. Test CondAdderN
+5. Test CsaNStage
+6. Harness together into Csa16 and Csa32 to test
