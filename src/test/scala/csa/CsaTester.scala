@@ -39,7 +39,7 @@ class CsaTester extends ChiselFlatSpec {
 
   "Something something..." should "Something Something..." in {
     if(backendNames.contains("verilator")) {
-      iotesters.Driver.execute(Array("--backend-name", "verilator"), () => new Csa(32)) {
+      iotesters.Driver.execute(Array("--backend-name", "verilator"), () => new Csa(32)) { //executing with "verilator" in array causes .V to be generated?
         c => new CsaUnitTester(c)
       } should be (true)
     }

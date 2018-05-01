@@ -43,4 +43,16 @@ class FullAdderTester extends ChiselFlatSpec {
     } should be (true)
   }
 
+  //chisel3.Driver.execute(Array[String](), () => new csa.FullAdder)
+  //run this in the sbt's console
+
+  //OR
+
+  // object HelloWorld extends App {
+  //chisel3.Driver.execute(args, () => new HelloWorld)
+  //}
+
+  //OR (untested)
+  //sbt "run --backend v --genHarness"
+
 }
