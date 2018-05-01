@@ -29,11 +29,21 @@ class CsaUnitTester(c: Csa) extends PeekPokeTester(c) {
 }
 
 class CsaTester extends ChiselFlatSpec {
-
-  "Basic test using Driver.execute" should "be used as an alternative way to run specification" in {
-    iotesters.Driver.execute(Array(), () => new Csa(32)) {
-      c => new CsaUnitTester(c)
-    } should be (true)
+  
+  private val backendNames = if(firrtl.FileUtils.isCommandAvailable("verilator")) {
+    Array("firrtl", "verilator")
   }
+  else {
+    Array("firrtl")
+  }
+
+  "Something something..." should "Something Something..." in {
+    if(backendNames.contains("verilator")) {
+      iotesters.Driver.execute(Array("--backend-name", "verilator"), () => new Csa(32)) {
+        c => new CsaUnitTester(c)
+      } should be (true)
+    }
+  }
+
 
 }
